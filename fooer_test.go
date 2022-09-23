@@ -65,3 +65,14 @@ func TestFooerParallel(t *testing.T) {
 		}
 	})
 }
+
+func TestFooerSkiped(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping test in short mode.")
+	}
+
+	result := Fooer(3)
+	if result != "Foo" {
+		t.Errorf("Result was incorrect, got: %s, want: %s.", result, "Foo")
+	}
+}
