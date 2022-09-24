@@ -115,3 +115,23 @@ func FuzzFooer(f *testing.F) {
 	})
 }
 ```
+
+## Using Testify 
+
+func TestFooerWithTestify(t *testing.T) {
+
+	// assert equality
+	assert.Equal(t, "Foo", Fooer(0), "0 is divisible by 3, should return Foo")
+
+	// assert inequality
+	assert.NotEqual(t, "Foo", Fooer(1), "1 is not divisible by 3, should not return Foo")
+}
+
+func TestMapWithTestify(t *testing.T) {
+
+	// require equality
+	require.Equal(t, map[int]string{1: "1", 2: "2"}, map[int]string{1: "1", 2: "3"})
+
+	// assert equality
+	assert.Equal(t, map[int]string{1: "1", 2: "2"}, map[int]string{1: "1", 2: "2"})
+}
