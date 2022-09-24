@@ -76,3 +76,16 @@ func TestFooerSkiped(t *testing.T) {
 		t.Errorf("Result was incorrect, got: %s, want: %s.", result, "Foo")
 	}
 }
+
+func BenchmarkFooer(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Fooer(i)
+	}
+}
+
+func FuzzFooer(f *testing.F) {
+	f.Add(3)
+	f.Fuzz(func(t *testing.T, a int) {
+		Fooer(a)
+	})
+}
