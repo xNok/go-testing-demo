@@ -142,3 +142,7 @@ func TestMapWithTestify(t *testing.T) {
 	// assert equality
 	assert.Equal(t, map[int]string{1: "1", 2: "2"}, map[int]string{1: "1", 2: "2"})
 }
+
+## Running with code coverage
+
+![Running with code coverage](./doc/coverage_test.gif)
