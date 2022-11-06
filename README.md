@@ -125,6 +125,7 @@ func FuzzFooer(f *testing.F) {
 
 ## Using Testify 
 
+```
 func TestFooerWithTestify(t *testing.T) {
 
 	// assert equality
@@ -133,7 +134,11 @@ func TestFooerWithTestify(t *testing.T) {
 	// assert inequality
 	assert.NotEqual(t, "Foo", Fooer(1), "1 is not divisible by 3, should not return Foo")
 }
+```
 
+Analysing differences between maps or complex struct
+
+```
 func TestMapWithTestify(t *testing.T) {
 
 	// require equality
@@ -142,6 +147,11 @@ func TestMapWithTestify(t *testing.T) {
 	// assert equality
 	assert.Equal(t, map[int]string{1: "1", 2: "2"}, map[int]string{1: "1", 2: "2"})
 }
+```
+
+![Analysing differences between maps](./doc/testify_test.gif)
+
+
 
 ## Running with code coverage
 
