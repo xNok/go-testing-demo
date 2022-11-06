@@ -11,6 +11,10 @@ func TestFooer(t *testing.T) {
 }
 ```
 
+Running a simple test
+
+![Simple Test](./doc/simple_test.gif)
+
 ## Table-driven tests
 
 ```
@@ -38,6 +42,9 @@ func TestFooerTableDriven(t *testing.T) {
 	}
 }
 ```
+Generating table driven test:
+
+![Generating table driven test](./doc/table_test.gif)
 
 ## The testing package
 
